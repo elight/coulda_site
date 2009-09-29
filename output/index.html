@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>coulda - Home</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+  </head>
+  <body>
+    <div id="main">
+<h1>
+  Coulda - Simplifying BDD
+</h1>
+<p>
+  Coulda is YATFL<a href="#YAFTL">*</a>.  It's a little guy that stands on the shoulders of giants.
+</p>
+<p>
+  Seriously speaking, Coulda is an internal DSL is similar to <a href="http://github.com/dchelimsky/rspec-stories">RSpec StoryRunner</a>, the predecessor of
+  <a href="http://github.com/aslakhellesoy/cucumber/tree/master">Cucumber</a>'s <a href="http://wiki.github.com/aslakhellesoy/cucumber/gherkin">Gherkin</a> external DSL.
+</p>
+<p>
+  When used, it can look like this:
+</p>
+<div class='code'>
+  <pre>Feature "Define a feature" do
+    in_order_to "write acceptance tests with less code"
+    as_a "developer"
+    i_want_to "use a simple internal DSL"
+  
+    Scenario "Demonstrate how coulda works" do
+      Given "a pending prereq" do
+        # Precondition code could go here
+      end 
+  
+      When "something happens" do
+        # Behavior to test invoked here
+      end
+  
+      Then "expect something else" do
+        # Assertions on result of behavior go here
+      end
+    end
+  end</pre>
+</div>
+<p>
+  But it can also be easily rendered as plain text (via a rake task) to look like this:
+</p>
+<div class='code'>
+  <pre>Feature: Define a feature
+    In order to write acceptance tests with less code
+    As a developer
+    I want to use a simple internal DSL
+  
+    Scenario: Demonstrate how coulda works
+      Given a pending prereq
+      When something happens
+      Then expect something else</pre>
+</div>
+<h2>
+  Getting Started
+</h2>
+<p>
+  Install the gem:
+</p>
+<div class='code'>
+  sudo gem install coulda
+</div>
+<p>
+  Then write some user stories/features/specs/tests/acceptance tests/your-name-<i>du-jour</i>-for-a-descriptive-testing-artifact
+</p>
+<div class='footer'>
+  <a name='YAFTL'>
+    * "Yet Another Frakking Testing Language"
+  </a>
+</div>
+
+      <div id="page_footer">
+        Copyright 2009, Evan David Light
+      </div>
+    </div>
+    <div id="sidebar">
+      <p><a href="/">Home</a></p>
+      <br/>
+      <h2>Documentation</h2>
+      <ul>
+        <li><a href="/tutorial/">Tutorial</a></li>
+        <li><a href="/why/">Why YATFTL</a> <a href="/#YAFTL">*</a>
+      </ul>
+      <h2>Community</h2>
+      <ul>
+        <li><a href="http://github.com/elight/coulda/">Contribute</a></li>
+        <li><a href="http://groups.google.com/group/coulda/">Discussion Group</a></li>
+        <li><a href="http://github.com/elight/coulda/issues">Issue Tracking</a></li>
+        <li><a href="http://github.com/elight/coulda/wiki">Wiki</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

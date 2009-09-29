@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>coulda - <%= @item[:title] %></title>
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+  </head>
+  <body>
+    <div id="main">
+<%= yield %>
+      <div id="page_footer">
+        Copyright 2009, Evan David Light
+      </div>
+    </div>
+    <div id="sidebar">
+      <p><a href="/">Home</a></p>
+      <br/>
+      <h2>Documentation</h2>
+      <ul>
+        <li><a href="/tutorial/">Tutorial</a></li>
+        <li><a href="/why/">Why YATFTL</a> <a href="/#YAFTL">*</a>
+      </ul>
+      <h2>Community</h2>
+      <ul>
+        <li><a href="http://github.com/elight/coulda/">Contribute</a></li>
+        <li><a href="http://groups.google.com/group/coulda/">Discussion Group</a></li>
+        <li><a href="http://github.com/elight/coulda/issues">Issue Tracking</a></li>
+        <li><a href="http://wiki.github.com/elight/coulda">Wiki</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

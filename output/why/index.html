@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>coulda - A New Item</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+  </head>
+  <body>
+    <div id="main">
+<h1>
+  Why Coulda?
+</h1>
+<p>
+  Behaviour Driven Development (or good Test Driven Development practices) promote communication.
+  Cucumber excels at communicating in pseudo-English via it's Gherkin external ("plain text") DSL.
+</p>
+<p>
+  However, Gherkin makes more work for the developer.  Cucumber abstracts away the nuts and bolts of your tests!
+  Yes, abstraction can be a good thing but Cucumber gives you no choice in the matter.
+  It hides code blocks behind a "call by regular expression" invocation mechianism instead of making them readily
+  available in the acceptance test description.
+</p>
+<p>
+  For some of us, this is too much abstraction and a code smell.
+</p>
+<p>
+  Coulda lets you write as much logic besides your pending specs as you want... or not.  Have it your way.
+</p>
+<h2>What makes Coulda different?</h2>
+<h3>
+  Test::Unit
+</h3>
+<p>
+  Coulda is built atop Test::Unit: that's "Test::Unit" in Ruby 1.8.6 but also "MiniUnit" in Ruby 1.9.x.
+  There are already a bevvy of tools out there that are either testing framework agnostic or are designed specifically
+  to work with Test::Unit.
+</p>
+<p>
+  Because T::U is a part of the Ruby distribution, if you have Ruby, Coulda will work for you right out of the box.
+</p>
+<h3>
+  Smaller is better
+</h3>
+<p>
+  I far prefer less code whenever reasonably possible.  I find that many frameworks are simply too large for my puny brain!
+  The learning curve intrinsic in thousands of lines of code is too much to bear.
+</p>
+<p>
+  So Coulda is tiny.
+</p>
+<p>
+  As of Coulda 0.3.0, it stands at under 250 lines of code.
+  This makes it easier for you to pop the hood, look at the code, understand what's going on, and to move on smartly from there.
+</p>
+<h3>
+  Does exactly two things
+</h3>
+<p>
+  Coulda executes its internal DSL as Test::Unit tests.  Coulda also marshals itself to plain text.  Ok, so Coulda doesn't do *one* thing.  Plain text marshalling seemed to valuable to pass up!
+</p>
+<p>
+  And that's all!  Coulda will not be modified to provide additional orthogonal features.
+</p>
+<p>
+  If you want support for feature X, you won't find it in Coulda!  If X doesn't exist in a gem that supports T::U, Please Do Investigate (PDI).
+</p>
+
+      <div id="page_footer">
+        Copyright 2009, Evan David Light
+      </div>
+    </div>
+    <div id="sidebar">
+      <p><a href="/">Home</a></p>
+      <br/>
+      <h2>Documentation</h2>
+      <ul>
+        <li><a href="/tutorial/">Tutorial</a></li>
+        <li><a href="/why/">Why YATFTL</a> <a href="/#YAFTL">*</a>
+      </ul>
+      <h2>Community</h2>
+      <ul>
+        <li><a href="http://github.com/elight/coulda/">Contribute</a></li>
+        <li><a href="http://groups.google.com/group/coulda/">Discussion Group</a></li>
+        <li><a href="http://github.com/elight/coulda/issues">Issue Tracking</a></li>
+        <li><a href="http://github.com/elight/coulda/wiki">Wiki</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

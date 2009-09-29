@@ -1,0 +1,36 @@
+%h1
+  Coulda - Simplifying BDD
+
+%p
+  Coulda is YATFL<a href="#YAFTL">*</a>.  It's a little guy that stands on the shoulders of giants.
+
+%p
+  Seriously speaking, Coulda is an internal DSL is similar to <a href="http://github.com/dchelimsky/rspec-stories">RSpec StoryRunner</a>, the predecessor of 
+  <a href="http://github.com/aslakhellesoy/cucumber/tree/master">Cucumber</a>'s <a href="http://wiki.github.com/aslakhellesoy/cucumber/gherkin">Gherkin</a> external DSL.
+
+%p 
+  When used, it can look like this:
+.code
+  %pre
+    = MAIN_PAGE_CODE_SAMPLE
+
+%p
+  But it can also be easily rendered as plain text (via a rake task) to look like this:
+.code
+  %pre
+    = MAIN_PAGE_PLAIN_TEXT_SAMPLE
+
+%h2
+  Getting Started
+%p
+  Install the gem:
+
+.code
+  sudo gem install coulda
+
+%p
+  Then write some user stories/features/specs/tests/acceptance tests/your-name-<i>du-jour</i>-for-a-descriptive-testing-artifact
+
+.footer
+  %a{:name => "YAFTL"}
+    * "Yet Another Frakking Testing Language"
