@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>coulda - Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+  </head>
+  <body>
+    <div id="main">
+<h3>Using Coulda</h3>
+<div class='section'>
+  <p>
+    If you don't already, you should create a "test_helper.rb" file, or something similarly named, to <a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> up
+    your tests.  In that helper file, you'll want to add the following:
+  </p>
+  <div class='code'>
+    <pre>    require 'rubygems'
+    require 'coulda'
+    include Coulda</pre>
+  </div>
+  The first line may be redundant if you (or something that you've already required) previously loaded rubygems.
+</div>
+<h3>Features</h3>
+<div class='section'>
+  <p>
+    Coulda's take on BDD, based on Cucumber, groups behavior into "Features".  A Feature defines its purpose and
+    <em>Scenarios</em>
+    that explain and exercise that purpose.
+  </p>
+  <p>
+    A pending Feature is a feature lacking any <a href="#Scenarios">Scenarios</a>.  Below is an example of a pending Feature.
+  </p>
+  <div class='code'>
+    <pre>    require 'test_helper'
+    
+    Feature "A pending feature"</pre>
+  </div>
+  <p>
+    Below is an example of a Feature that contains a purpose.
+  </p>
+  <div class='code'>
+    <pre>    require 'test_helper'
+    
+    Feature "A pending feature" do
+      in_order_to "accomplish something else"
+      as_a "user"
+      i_want_to "do something"
+    end</pre>
+  </div>
+</div>
+<h3>
+  <a name='Scenarios'>
+    Defining Scenario
+  </a>
+</h3>
+<div class='section'>
+  <p>
+    Coulda recommends (but does not force) that you express
+    <em>Scenarios</em>
+    using:
+    <ul>
+      <li>
+        <em>Preconditions</em>
+        using the
+        <em>Given</em>
+        method
+      </li>
+      <li>
+        <em>Events</em>
+        using the
+        <em>When</em>
+        method
+      </li>
+      <li>
+        <em>Expectations</em>
+        using the
+        <em>Then</em>
+        method
+      </li>
+    </ul>
+  </p>
+</div>
+
+      <div id="page_footer">
+        Copyright 2009, Evan David Light
+      </div>
+    </div>
+    <div id="sidebar">
+      <p><a href="/">Home</a></p>
+      <br/>
+      <h2>Documentation</h2>
+      <ul>
+        <li><a href="/tutorial/">Tutorial</a></li>
+        <li><a href="/why/">Why YATFTL</a> <a href="/#YAFTL">*</a>
+      </ul>
+      <h2>Community</h2>
+      <ul>
+        <li><a href="http://github.com/elight/coulda/">Contribute</a></li>
+        <li><a href="http://groups.google.com/group/coulda/">Discussion Group</a></li>
+        <li><a href="http://github.com/elight/coulda/issues">Issue Tracking</a></li>
+        <li><a href="http://wiki.github.com/elight/coulda">Wiki</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

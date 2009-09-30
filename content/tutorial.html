@@ -1,0 +1,61 @@
+%h3 Using Coulda
+.section
+  %p
+    If you don't already, you should create a "test_helper.rb" file, or something similarly named, to <a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> up
+    your tests.  In that helper file, you'll want to add the following:
+
+  .code
+    %pre
+      = TEST_HELPER
+
+  The first line may be redundant if you (or something that you've already required) previously loaded rubygems.
+
+%h3 Features
+.section
+  %p
+    Coulda's take on BDD, based on Cucumber, groups behavior into "Features".  A Feature defines its purpose and
+    %em Scenarios
+    that explain and exercise that purpose.
+
+  %p
+    A pending Feature is a feature lacking any <a href="#Scenarios">Scenarios</a>.  Below is an example of a pending Feature.
+
+  .code
+    %pre 
+      = PENDING_FEATURE
+
+  %p
+    Below is an example of a Feature that contains a purpose.
+
+  .code
+    %pre
+      = PENDING_FEATURE_WITH_PURPOSE
+
+
+
+%h3 
+  %a{:name => "Scenarios"}
+    Defining Scenarios
+.section
+  %p
+    Coulda recommends (but does not force) that you express 
+    %em Scenarios 
+    using:
+    %ul
+      %li 
+        %em Preconditions
+        using the 
+        %em Given
+        method
+      %li
+        %em Events
+        using the
+        %em When
+        method
+      %li
+        %em Expectations
+        using the
+        %em Then
+        method
+
+
