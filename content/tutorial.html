@@ -35,10 +35,17 @@
 
 %h3 
   %a{:name => "Scenarios"}
-    Defining Scenarios
+    Scenarios
 .section
   %p
-    Coulda recommends (but does not force) that you express 
+    A Scenario demonstrates one aspect of the Feature.  Often, it's a happy or one of many sad paths exercising the behavior in our Feature.
+  %p
+    You can write a "pending" Scenario using Coulda as follows:
+  .code
+    %pre
+      = PENDING_SCENARIO
+  %p
+    Coulda recommends that you express 
     %em Scenarios 
     using:
     %ul
@@ -57,5 +64,21 @@
         using the
         %em Then
         method
-
-  %em More coming soon...
+  %p
+    The most common use of Scenario would specify at least one Given, When, and Then perhaps as below:
+  .code
+    %pre
+      = SCENARIO
+  %h4 Reuse within a Feature
+  %p
+    If you wish to reuse code within a Feature, you may want to factor behavior out into methods:
+  .code
+    %pre
+      = REUSE_VIA_METHODS
+  %h4 Reuse between Features
+  %p
+    However, if you wish to reuse code between Features, then you should put it in a Module and mix it in.  The below example defines the Module within the same source file; however, it should be obvious that you can do so in a separate file and require it as desired.
+  .code
+    %pre
+      = REUSE_VIA_MIXIN
+    

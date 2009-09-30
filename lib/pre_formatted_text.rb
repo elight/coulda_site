@@ -54,5 +54,105 @@ Feature "A pending feature" do
 end
 HERE
 
+PENDING_SCENARIO = <<HERE
+    require 'test_helper'
+
+Feature "A pending feature" do
+  in_order_to "accomplsih something else"
+  as_a "user"
+  i_want_to "do something"
+
+  Scenario "that is pending"
+end
+HERE
+
+SCENARIO = <<HERE
+    require 'test_helper'
+
+Feature "Painfully obvious" do
+  in_order_to "demonstrate a simple test"
+  as_a "coulda developer"
+  i_want_to "provide a straight-forward scenario"
+
+  Scenario "Describing something obvious" do
+    Given "something without a value" do
+      @no_value = nil
+    end
+
+    When "I give it a value" do
+      @no_value = true
+    end
+
+    Then "it should have a value" do
+      assert(@no_value)
+    end
+  end
+end
+HERE
+
+REUSE_VIA_METHODS = <<HERE
+    require 'test_helper'
+
+Feature "Painfully obvious" do
+  in_order_to "demonstrate a simple test"
+  as_a "coulda developer"
+  i_want_to "provide a straight-forward scenario"
+
+  def something_without_a_value
+    @no_value = nil
+  end
+
+  Scenario "Describing something obvious" do
+    Given "something without a value" do
+      something_without_a_value
+    end
+
+    When "I give it a value" do
+      @no_value = true
+    end
+
+    Then "it should have a value" do
+      assert(@no_value)
+    end
+  end
+end
+HERE
+
+REUSE_VIA_MIXIN = <<HERE
+    require 'test_helper'
+require 'coulda'
+include Coulda
+
+module MyMacros
+  def given_something_without_a_value
+    Given "something without a value" do
+      @no_value = nil
+    end
+  end
+
+  def assert_variable_has_a_value
+    assert(@no_value)
+  end
+end
+
+Feature "Painfully obvious" do
+  include MyMacros
+
+  in_order_to "demonstrate a simple test"
+  as_a "coulda developer"
+  i_want_to "provide a straight-forward scenario"
 
 
+  Scenario "Describing something obvious" do
+    given_something_without_a_value
+
+    When "I give it a value" do
+      @no_value = true
+    end
+
+    Then "it should have a value" do
+      assert_variable_has_a_value
+    end
+  end
+end
+HERE
