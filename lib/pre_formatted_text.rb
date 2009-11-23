@@ -136,7 +136,7 @@ module MyMacros
 end
 
 Feature "Painfully obvious" do
-  include MyMacros
+  extend MyMacros
 
   in_order_to "demonstrate a simple test"
   as_a "coulda developer"
@@ -154,5 +154,11 @@ Feature "Painfully obvious" do
       assert_variable_has_a_value
     end
   end
+end
+HERE
+
+RAILS_UNIT_TEST = <<HERE
+    Feature "A Rails feature", :testcase_class => ActiveSupport::TestCase do
+  ...
 end
 HERE
