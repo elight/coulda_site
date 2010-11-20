@@ -1,4 +1,4 @@
-%h1
+%h2
   Coulda - Simplifying BDD
 
 %p
@@ -27,10 +27,24 @@
 
 .code
   %pre
-    sudo gem install coulda
+    sudo gem install coulda 
+%p
+  (unless you're using <a href="http://rvm.beginrescueend.com">RVM</a> -- which you probably should be in which case it's "gem install coulda")
 
 %p
   Then write some user stories/features/specs/tests/acceptance tests/your-name-<i>du-jour</i>-for-a-descriptive-testing-artifact
+
+%h2
+  Rendering stories as text
+
+%p It's this easy:
+.code
+  %pre
+    RAILS_ENV=test rake coulda:print_features
+%p And then you get this:
+.code
+  %pre
+    = MAIN_PAGE_PLAIN_TEXT_SAMPLE
 
 .footer
   %a{:name => "YAFTL"}
