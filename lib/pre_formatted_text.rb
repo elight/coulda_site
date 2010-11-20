@@ -158,7 +158,9 @@ end
 HERE
 
 RAILS_UNIT_TEST = <<HERE
-    Feature "A Rails feature", :testcase_class => ActiveSupport::TestCase do
+    Coulda.default_test_case_class = ActiveSupport::TestCase
+...
+Feature "A Rails feature" do
   ...
 end
 HERE
