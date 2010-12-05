@@ -102,10 +102,15 @@ Feature "Painfully obvious" do
     @no_value = nil
   end
 
+  def self.this_method_is_called_by_name
+  end
+
   Scenario "Describing something obvious" do
     Given "something without a value" do
       something_without_a_value
     end
+
+    And :this_method_is_called_by_name
 
     When "I give it a value" do
       @no_value = true
